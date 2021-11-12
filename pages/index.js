@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 class Index extends React.Component {
   render() {
+    console.log("this.props from index", this.props);
     return (
       <div className={"h-screen dark:bg-black dark:text-white bg-red-300"}>
         Hello
@@ -11,7 +12,7 @@ class Index extends React.Component {
 }
 function mapStateToProps(state) {
   return {
-    state: state.auth,
+    state: state,
   };
 }
 export default connect(mapStateToProps)(Index);
